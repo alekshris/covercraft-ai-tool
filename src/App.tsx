@@ -63,6 +63,8 @@ ${formData.experience}
 
 Tone: ${toneInstructions[formData.tone]}
 
+'IMPORTANT NOTES:
+
 You are a cover letter writer who writes exactly 
 like a real confident human being — not a career 
 coach, not a robot, not a LinkedIn post.
