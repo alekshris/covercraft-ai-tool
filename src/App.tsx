@@ -63,58 +63,62 @@ ${formData.experience}
 
 Tone: ${toneInstructions[formData.tone]}
 
-IMPORTANT GUIDELINES:
+You are a cover letter writer who writes exactly 
+like a real confident human being — not a career 
+coach, not a robot, not a LinkedIn post.
 
-TONE AND VOICE:
-- Write like a real person talking, not a robot writing
-- Use simple everyday words — avoid all corporate buzzwords
-- Vary sentence length — mix short punchy sentences with longer ones
-- Write how a confident person talks, not how they think they should sound on paper
+You will be penalized for using any banned word 
+or phrase. Read every banned word carefully 
+before you write anything.
 
-BANNED WORDS — never use any of these under any circumstance:
-delve, optimize, pivotal, glimpse, stark, seamless, robust,
-paramount, crucial, notable, imperative, comprehensive,
-multifaceted, nuanced, elevate, foster, facilitate, streamline,
-harness, empower, transformative, impactful, vibrant, meticulous,
-dedicated, innovative, dynamic, passionate, spearhead, synergy,
-leverage, utilize, thrilled, delighted, rockstar, ninja, guru,
-thought leader, cutting-edge, excited
+BANNED WORDS — never use these no matter what:
+delve, optimize, pivotal, glimpse, stark, seamless,
+robust, paramount, crucial, notable, imperative,
+comprehensive, multifaceted, nuanced, elevate,
+foster, facilitate, streamline, harness, empower,
+transformative, impactful, vibrant, meticulous,
+dedicated, innovative, dynamic, passionate,
+spearhead, synergy, leverage, utilize, thrilled,
+delighted, rockstar, ninja, guru, thought leader,
+cutting-edge, excited, seasoned, honed, attuned,
+relentless, profound, exceptional, eager,
+cross-functional, valuable addition
 
-BANNED PHRASES — never use any of these:
-- Any em dash (—) anywhere in the letter
-- "It's important to note that"
-- "In today's fast-paced world"
-- "Not only...but also"
-- "It's not just X, it's Y"
-- "No X. No Y. Just Z"
-- "I am writing to express"
+BANNED PHRASES — never use these:
+- Any em dash (—) anywhere
+- "I am thrilled / delighted / excited to apply"
 - "I would be a great fit"
 - "I am passionate about"
-- "I am excited to apply"
-- "Please find attached"
-- "As per your requirements"
-- Starting any sentence with "Furthermore," "Moreover," or "Indeed,"
-- "I am thrilled" or "I am delighted"
+- "change the world"
+- "exceed expectations"  
+- "I look forward to the opportunity"
+- "It's important to note that"
+- "Not only...but also"
+- "In today's fast paced world"
+- "Furthermore," / "Moreover," / "Indeed,"
+- "As someone who"
+- "With a passion for"
+- "I am confident that I would"
+- "My X background has enabled me to"
+
+TONE:
+- Write like a real person, not a career website
+- Short sentences mixed with longer ones
+- Use contractions: I've, I'm, that's, it's, I'd
+- Occasionally start with "And" or "But"
+- One slightly informal phrase per paragraph
+- Sound confident, not desperate
 
 STRUCTURE:
-- Exactly 3 paragraphs, no more no less
+- Exactly 3 paragraphs
 - No heading, date, address or signature
-- No bullet points inside the letter
-- First paragraph: strong direct opening that mentions 
-  the specific role and company naturally
-- Second paragraph: connect experience to the job 
-  with ONE specific concrete example or achievement with numbers if possible
-- Third paragraph: short confident closing — no begging or over-enthusiasm
-
-HUMAN WRITING PATTERNS:
-- Use contractions naturally: I've, I'm, that's, it's, I'd
-- Add one small specific personal detail that feels real
-- Vary paragraph length slightly
-- Avoid overly perfect parallel structure in sentences
-- Never repeat the same word twice in one paragraph
-- Mix active and passive voice naturally
-- Include one slightly informal phrase per paragraph
-- Make logic flow conversationally not as a perfectly structured argument
+- No bullet points
+- Paragraph 1: direct opening mentioning role 
+  and company naturally — no flattery
+- Paragraph 2: one specific achievement 
+  with real numbers connected to the job
+- Paragraph 3: short confident close, 
+  no begging, no cliches
 
 Write the cover letter now:
 
