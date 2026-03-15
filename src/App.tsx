@@ -29,7 +29,6 @@ function App() {
     if (!formData.companyName.trim()) newErrors.companyName = true;
     if (!formData.jobDescription.trim()) newErrors.jobDescription = true;
     if (!formData.experience.trim()) newErrors.experience = true;
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -50,41 +49,12 @@ function App() {
       concise: 'Write in a brief, direct manner that gets straight to the point while covering key qualifications.',
     };
 
-    const prompt = `You are an expert cover letter writer. Write a personalized, compelling 3-paragraph cover letter for this job application.
+    const prompt = `You are a cover letter writer who writes exactly like a real confident human being — not a career coach, not a robot, not a LinkedIn post.
 
-Job Title: ${formData.jobTitle}
-Company: ${formData.companyName}
-
-Job Description:
-${formData.jobDescription}
-
-Candidate's Experience/Background:
-${formData.experience}
-
-Tone: ${toneInstructions[formData.tone]}
-
-'IMPORTANT NOTES:
-
-You are a cover letter writer who writes exactly 
-like a real confident human being — not a career 
-coach, not a robot, not a LinkedIn post.
-
-You will be penalized for using any banned word 
-or phrase. Read every banned word carefully 
-before you write anything.
+You will be penalized for using any banned word or phrase. Read every banned word carefully before you write anything.
 
 BANNED WORDS — never use these no matter what:
-delve, optimize, pivotal, glimpse, stark, seamless,
-robust, paramount, crucial, notable, imperative,
-comprehensive, multifaceted, nuanced, elevate,
-foster, facilitate, streamline, harness, empower,
-transformative, impactful, vibrant, meticulous,
-dedicated, innovative, dynamic, passionate,
-spearhead, synergy, leverage, utilize, thrilled,
-delighted, rockstar, ninja, guru, thought leader,
-cutting-edge, excited, seasoned, honed, attuned,
-relentless, profound, exceptional, eager,
-cross-functional, valuable addition
+delve, optimize, pivotal, glimpse, stark, seamless, robust, paramount, crucial, notable, imperative, comprehensive, multifaceted, nuanced, elevate, foster, facilitate, streamline, harness, empower, transformative, impactful, vibrant, meticulous, dedicated, innovative, dynamic, passionate, spearhead, synergy, leverage, utilize, thrilled, delighted, rockstar, ninja, guru, thought leader, cutting-edge, excited, seasoned, honed, attuned, relentless, profound, exceptional, eager, cross-functional, valuable addition
 
 BANNED PHRASES — never use these:
 - Any em dash (—) anywhere
@@ -92,7 +62,7 @@ BANNED PHRASES — never use these:
 - "I would be a great fit"
 - "I am passionate about"
 - "change the world"
-- "exceed expectations"  
+- "exceed expectations"
 - "I look forward to the opportunity"
 - "It's important to note that"
 - "Not only...but also"
@@ -115,14 +85,22 @@ STRUCTURE:
 - Exactly 3 paragraphs
 - No heading, date, address or signature
 - No bullet points
-- Paragraph 1: direct opening mentioning role 
-  and company naturally — no flattery
-- Paragraph 2: one specific achievement 
-  with real numbers connected to the job
-- Paragraph 3: short confident close, 
-  no begging, no cliches
+- Paragraph 1: direct opening mentioning role and company naturally — no flattery
+- Paragraph 2: one specific achievement with real numbers connected to the job
+- Paragraph 3: short confident close, no begging, no cliches
 
-Write the cover letter now':
+Job Title: ${formData.jobTitle}
+Company: ${formData.companyName}
+
+Job Description:
+${formData.jobDescription}
+
+Candidate's Experience/Background:
+${formData.experience}
+
+Tone: ${toneInstructions[formData.tone]}
+
+Write the cover letter now:`;
 
     try {
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
