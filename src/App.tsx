@@ -44,73 +44,88 @@ function App() {
     setCoverLetter('');
 
     const toneInstructions = {
-      professional: `Write in a professional, polished tone.
-Still sound like a real human being, but keep it formal and composed.
-Do NOT use contractions like I've or I'm — write I have, I am instead.
-No informal phrases, no casual sentence starters.
-Confident, mature, and measured. Every sentence should feel considered.`,
+      professional: `PROFESSIONAL TONE — this is strict, follow exactly:
+- Write like a senior professional speaking to a hiring committee
+- Formal, composed, and confident — think Harvard Business School graduate
+- NO contractions at all: write "I have" not "I've", "I am" not "I'm", "that is" not "that's"
+- NO informal words: no "pretty", "honestly", "right?", "huge", "cool", "stuff", "things"
+- NO casual sentence starters: never start with "And", "But", "So", "Look"
+- NO filler phrases: no "let's see", "hit the ground running", "at the end of the day"
+- Every sentence is deliberate and measured
+- Show genuine interest through specific knowledge of the company, not enthusiasm words
+- Confident but not arrogant — state facts about your experience, do not oversell
+- The tone should feel like a well written business letter from a competent professional`,
 
-      enthusiastic: `Write with genuine energy and warmth.
-This is where contractions and a bit of personality work well.
-Sound like a real person who actually wants this job — not a robot pretending to be excited.
-Natural, upbeat, still professional enough for a job application but with real character showing through.
-Use contractions freely: I've, I'm, that's, I'd.`,
+      enthusiastic: `ENTHUSIASTIC TONE — warm and energetic but still professional:
+- Write with genuine personality and warmth
+- Contractions are fine: I've, I'm, that's, I'd
+- Show real interest in the company with specific details
+- Upbeat and positive but not over the top
+- Sound like a motivated person, not a cheerleader
+- Still professional enough for a job application
+- Avoid being too casual — no slang, no jokes`,
 
-      concise: `Write in short, direct sentences. Get to the point fast.
-No filler words, no long explanations, no padding.
-Every sentence should earn its place.
-Still sounds like a real human — just stripped back and sharp.
-Contractions are fine here, they keep it tight.`,
+      concise: `CONCISE TONE — short, sharp, and direct:
+- Get to the point immediately, no warm up sentences
+- Short sentences, no padding, no filler
+- Every word earns its place
+- Still professional and human
+- Contractions are fine to keep it tight
+- The whole letter should feel lean and efficient`,
     };
 
-    const prompt = `You are a cover letter writer who writes exactly like a real confident human being — not a career coach, not a robot, not a LinkedIn post.
+    const prompt = `You are a cover letter writer who writes like a real, confident human professional. Your job is to write cover letters that sound like they were written by the candidate themselves — not by AI, not by a career coach.
 
-You will be penalized heavily for using any banned word or phrase. Read every banned word carefully before you write a single word.
+CRITICAL RULE: You will be penalized for every banned word or phrase you use. Read the full banned list before writing anything.
 
-BANNED WORDS — never use these no matter what:
-delve, optimize, pivotal, glimpse, stark, seamless, robust, paramount, crucial, notable, imperative, comprehensive, multifaceted, nuanced, elevate, foster, facilitate, streamline, harness, empower, transformative, impactful, vibrant, meticulous, dedicated, innovative, dynamic, passionate, spearhead, synergy, leverage, utilize, thrilled, delighted, rockstar, ninja, guru, thought leader, cutting-edge, excited, seasoned, honed, attuned, relentless, profound, exceptional, eager, cross-functional, valuable addition
+BANNED WORDS — never use these under any circumstance:
+delve, optimize, pivotal, glimpse, stark, seamless, robust, paramount, crucial, notable, imperative, comprehensive, multifaceted, nuanced, elevate, foster, facilitate, streamline, harness, empower, transformative, impactful, vibrant, meticulous, dedicated, innovative, dynamic, spearhead, synergy, leverage, utilize, thrilled, delighted, rockstar, ninja, guru, thought leader, cutting-edge, seasoned, honed, attuned, relentless, profound, exceptional, eager, cross-functional, valuable addition, hard-working, results-driven, team player, go-getter
 
 BANNED PHRASES — never use these:
 - Any em dash anywhere in the letter
-- I am thrilled or delighted or excited to apply
-- I would be a great fit
-- I am passionate about
-- change the world
-- exceed expectations
-- I look forward to the opportunity
-- It is important to note that
-- Not only but also
-- In today's fast paced world
-- Furthermore or Moreover or Indeed as sentence starters
-- As someone who
-- With a passion for
-- I am confident that I would
-- My background has enabled me to
-- I am writing to express
-- please find attached
-- as per your requirements
+- "I am thrilled or delighted or excited to apply"
+- "I would be a great fit"
+- "I am passionate about"
+- "my passion for"
+- "change the world"
+- "exceed expectations"
+- "I look forward to the opportunity"
+- "It is important to note"
+- "Not only but also"
+- "In today's fast paced world"
+- "Furthermore" or "Moreover" or "Indeed" as sentence starters
+- "As someone who"
+- "With a passion for"
+- "I am confident that I would"
+- "hit the ground running"
+- "let's see where it goes"
+- "at the end of the day"
+- "I am writing to express my interest"
+- "please find attached"
+- "as per your requirements"
+- "I think I would be"
+- "pretty confident"
+- "pretty appealing"
+- "And honestly"
+- "right?" at end of sentences
 
-TONE INSTRUCTIONS — the selected tone below overrides everything else:
+TONE — follow the selected tone instructions exactly, they override everything else:
 ${toneInstructions[formData.tone]}
-
-If tone is Professional: no contractions, no informal phrases, no And or But starters — keep it composed and formal while still sounding human.
-If tone is Enthusiastic: use contractions freely, show real personality and warmth.
-If tone is Concise: short sharp sentences, no filler, contractions are fine.
 
 STRUCTURE — follow this exactly:
 - Exactly 3 paragraphs, no more no less
-- No heading, date, address or signature
+- No heading, date, address, greeting or signature
 - No bullet points inside the letter
-- Paragraph 1: strong direct opening that mentions the specific role and company naturally — no flattery
-- Paragraph 2: connect experience to the job with ONE specific concrete achievement with real numbers if possible
-- Paragraph 3: short confident closing — no begging, no cliches
+- Paragraph 1: open directly by stating the role and what specifically draws you to this company — use a real specific detail about the company, not generic praise
+- Paragraph 2: give ONE concrete achievement with specific numbers that directly connects to what the job requires
+- Paragraph 3: short, confident close that moves things forward — no begging, no cliches, no "I look forward to hearing from you"
 
-HUMAN WRITING PATTERNS:
-- Never repeat the same word twice in one paragraph
-- Mix active and passive voice naturally
-- Vary paragraph length slightly
-- Avoid perfectly parallel sentence structure
-- Make the logic flow conversationally
+QUALITY CHECK — before finalising, verify:
+- Does it contain any banned word? Remove it.
+- Does it contain any em dash? Remove it.
+- Does it match the selected tone exactly?
+- Does it sound like a real human wrote it?
+- Is it specific to this company and role, not generic?
 
 Job Title: ${formData.jobTitle}
 Company: ${formData.companyName}
