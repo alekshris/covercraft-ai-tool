@@ -64,16 +64,59 @@ ${formData.experience}
 Tone: ${toneInstructions[formData.tone]}
 
 IMPORTANT GUIDELINES:
-- Make it sound natural and human, NOT generic or templated
-- Reference specific aspects from the job description
-- Connect the candidate's experience directly to job requirements
-- Show genuine interest in the company and role
-- Keep it to exactly 3 paragraphs
-- Do NOT use overly flowery language or clichés
-- Do NOT include a heading, date, or address block - just the letter body
-- Do NOT include a signature line - just end after the closing paragraph
 
-Write the cover letter now:`;
+TONE AND VOICE:
+- Write like a real person talking, not a robot writing
+- Use simple everyday words — avoid all corporate buzzwords
+- Vary sentence length — mix short punchy sentences with longer ones
+- Write how a confident person talks, not how they think they should sound on paper
+
+BANNED WORDS — never use any of these under any circumstance:
+delve, optimize, pivotal, glimpse, stark, seamless, robust,
+paramount, crucial, notable, imperative, comprehensive,
+multifaceted, nuanced, elevate, foster, facilitate, streamline,
+harness, empower, transformative, impactful, vibrant, meticulous,
+dedicated, innovative, dynamic, passionate, spearhead, synergy,
+leverage, utilize, thrilled, delighted, rockstar, ninja, guru,
+thought leader, cutting-edge, excited
+
+BANNED PHRASES — never use any of these:
+- Any em dash (—) anywhere in the letter
+- "It's important to note that"
+- "In today's fast-paced world"
+- "Not only...but also"
+- "It's not just X, it's Y"
+- "No X. No Y. Just Z"
+- "I am writing to express"
+- "I would be a great fit"
+- "I am passionate about"
+- "I am excited to apply"
+- "Please find attached"
+- "As per your requirements"
+- Starting any sentence with "Furthermore," "Moreover," or "Indeed,"
+- "I am thrilled" or "I am delighted"
+
+STRUCTURE:
+- Exactly 3 paragraphs, no more no less
+- No heading, date, address or signature
+- No bullet points inside the letter
+- First paragraph: strong direct opening that mentions 
+  the specific role and company naturally
+- Second paragraph: connect experience to the job 
+  with ONE specific concrete example or achievement with numbers if possible
+- Third paragraph: short confident closing — no begging or over-enthusiasm
+
+HUMAN WRITING PATTERNS:
+- Use contractions naturally: I've, I'm, that's, it's, I'd
+- Add one small specific personal detail that feels real
+- Vary paragraph length slightly
+- Avoid overly perfect parallel structure in sentences
+- Never repeat the same word twice in one paragraph
+- Mix active and passive voice naturally
+- Include one slightly informal phrase per paragraph
+- Make logic flow conversationally not as a perfectly structured argument
+
+Write the cover letter now:
 
     try {
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
