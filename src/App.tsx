@@ -44,50 +44,73 @@ function App() {
     setCoverLetter('');
 
     const toneInstructions = {
-      professional: 'Write in a professional, polished tone that demonstrates competence and maturity.',
-      enthusiastic: 'Write with genuine enthusiasm and energy while remaining professional.',
-      concise: 'Write in a brief, direct manner that gets straight to the point while covering key qualifications.',
+      professional: `Write in a professional, polished tone.
+Still sound like a real human being, but keep it formal and composed.
+Do NOT use contractions like I've or I'm — write I have, I am instead.
+No informal phrases, no casual sentence starters.
+Confident, mature, and measured. Every sentence should feel considered.`,
+
+      enthusiastic: `Write with genuine energy and warmth.
+This is where contractions and a bit of personality work well.
+Sound like a real person who actually wants this job — not a robot pretending to be excited.
+Natural, upbeat, still professional enough for a job application but with real character showing through.
+Use contractions freely: I've, I'm, that's, I'd.`,
+
+      concise: `Write in short, direct sentences. Get to the point fast.
+No filler words, no long explanations, no padding.
+Every sentence should earn its place.
+Still sounds like a real human — just stripped back and sharp.
+Contractions are fine here, they keep it tight.`,
     };
 
     const prompt = `You are a cover letter writer who writes exactly like a real confident human being — not a career coach, not a robot, not a LinkedIn post.
 
-You will be penalized for using any banned word or phrase. Read every banned word carefully before you write anything.
+You will be penalized heavily for using any banned word or phrase. Read every banned word carefully before you write a single word.
 
 BANNED WORDS — never use these no matter what:
 delve, optimize, pivotal, glimpse, stark, seamless, robust, paramount, crucial, notable, imperative, comprehensive, multifaceted, nuanced, elevate, foster, facilitate, streamline, harness, empower, transformative, impactful, vibrant, meticulous, dedicated, innovative, dynamic, passionate, spearhead, synergy, leverage, utilize, thrilled, delighted, rockstar, ninja, guru, thought leader, cutting-edge, excited, seasoned, honed, attuned, relentless, profound, exceptional, eager, cross-functional, valuable addition
 
 BANNED PHRASES — never use these:
-- Any em dash (—) anywhere
-- "I am thrilled / delighted / excited to apply"
-- "I would be a great fit"
-- "I am passionate about"
-- "change the world"
-- "exceed expectations"
-- "I look forward to the opportunity"
-- "It's important to note that"
-- "Not only...but also"
-- "In today's fast paced world"
-- "Furthermore," / "Moreover," / "Indeed,"
-- "As someone who"
-- "With a passion for"
-- "I am confident that I would"
-- "My X background has enabled me to"
+- Any em dash anywhere in the letter
+- I am thrilled or delighted or excited to apply
+- I would be a great fit
+- I am passionate about
+- change the world
+- exceed expectations
+- I look forward to the opportunity
+- It is important to note that
+- Not only but also
+- In today's fast paced world
+- Furthermore or Moreover or Indeed as sentence starters
+- As someone who
+- With a passion for
+- I am confident that I would
+- My background has enabled me to
+- I am writing to express
+- please find attached
+- as per your requirements
 
-TONE:
-- Write like a real person, not a career website
-- Short sentences mixed with longer ones
-- Use contractions: I've, I'm, that's, it's, I'd
-- Occasionally start with "And" or "But"
-- One slightly informal phrase per paragraph
-- Sound confident, not desperate
+TONE INSTRUCTIONS — the selected tone below overrides everything else:
+${toneInstructions[formData.tone]}
 
-STRUCTURE:
-- Exactly 3 paragraphs
+If tone is Professional: no contractions, no informal phrases, no And or But starters — keep it composed and formal while still sounding human.
+If tone is Enthusiastic: use contractions freely, show real personality and warmth.
+If tone is Concise: short sharp sentences, no filler, contractions are fine.
+
+STRUCTURE — follow this exactly:
+- Exactly 3 paragraphs, no more no less
 - No heading, date, address or signature
-- No bullet points
-- Paragraph 1: direct opening mentioning role and company naturally — no flattery
-- Paragraph 2: one specific achievement with real numbers connected to the job
-- Paragraph 3: short confident close, no begging, no cliches
+- No bullet points inside the letter
+- Paragraph 1: strong direct opening that mentions the specific role and company naturally — no flattery
+- Paragraph 2: connect experience to the job with ONE specific concrete achievement with real numbers if possible
+- Paragraph 3: short confident closing — no begging, no cliches
+
+HUMAN WRITING PATTERNS:
+- Never repeat the same word twice in one paragraph
+- Mix active and passive voice naturally
+- Vary paragraph length slightly
+- Avoid perfectly parallel sentence structure
+- Make the logic flow conversationally
 
 Job Title: ${formData.jobTitle}
 Company: ${formData.companyName}
@@ -95,10 +118,8 @@ Company: ${formData.companyName}
 Job Description:
 ${formData.jobDescription}
 
-Candidate's Experience/Background:
+Candidate Experience and Background:
 ${formData.experience}
-
-Tone: ${toneInstructions[formData.tone]}
 
 Write the cover letter now:`;
 
