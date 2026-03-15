@@ -120,7 +120,7 @@ STRUCTURE:
 - Paragraph 3: short confident close, 
   no begging, no cliches
 
-Write the cover letter now:
+Write the cover letter now':
 
     try {
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
